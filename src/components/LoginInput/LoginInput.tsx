@@ -7,6 +7,7 @@ const LoginInput: React.FC<LoginInputProps> = ({ labelName }) => {
   return (
     <>
       <LoginLabel>{labelName}</LoginLabel>
+      <LoginInputField isWrong={false} placeholder={labelName} />
     </>
   );
 };
