@@ -1,7 +1,13 @@
 import React from "react";
 
-import { LoginLabel, LoginInputField } from "./LoginInput.elements";
+import {
+  LoginInputContainer,
+  LoginLabel,
+  LoginInputField,
+  IconContainer,
+} from "./LoginInput.elements";
 import { LoginInputProps } from "./protocols";
+import { UserIcon } from "../../assets/icons";
 
 const LoginInput: React.FC<LoginInputProps> = ({
   labelName,
@@ -11,13 +17,19 @@ const LoginInput: React.FC<LoginInputProps> = ({
   return (
     <>
       <LoginLabel htmlFor={identifier}>{labelName}</LoginLabel>
-      <LoginInputField
-        id={identifier}
-        name={identifier}
-        placeholder={labelName}
-        isWrong={false}
-        type={type}
-      />
+
+      <LoginInputContainer>
+        <IconContainer isWrong={false}>
+          <UserIcon />
+        </IconContainer>
+        <LoginInputField
+          id={identifier}
+          name={identifier}
+          placeholder={labelName}
+          isWrong={false}
+          type={type}
+        />
+      </LoginInputContainer>
     </>
   );
 };
