@@ -19,11 +19,17 @@ describe("LoginForm test suit", () => {
 
   it("Should render e-mail label", () => {
     const { wrapper } = makeSut();
-    expect(wrapper.find('label')).toBeTruthy();
+    console.log(wrapper.find(<label />).at(1).debug());
+    expect(wrapper.find('label').at(0).text()).toEqual("E-mail");
   });
 
   it("Should render e-mail input", () => {
     const { wrapper } = makeSut();
-    expect(wrapper.find({ name: 'email-input' })).toBeTruthy();
+    expect(wrapper.find('email-input')).toBeTruthy();
+  });
+
+  it("Should render password label", () => {
+    const { wrapper } = makeSut();
+    expect(wrapper.find('label').at(1).text()).toEqual("Password");
   });
 });
