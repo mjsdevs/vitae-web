@@ -24,29 +24,29 @@ const makeSut = () => {
   return {
     props,
     submitHandlerStub,
-    wrapper: shallow(<LoginForm {...props} />),
+    component: shallow(<LoginForm {...props} />),
   };
 };
 
 describe("LoginForm test suit", () => {
   it("Should render without errors", () => {
-    const { wrapper } = makeSut();
-    expect(wrapper.exists()).toBeTruthy();
+    const { component } = makeSut();
+    expect(component.exists()).toBeTruthy();
   });
 
   it("Should render e-mail input", () => {
-    const { wrapper } = makeSut();
-    expect(wrapper.find("email-input")).toBeTruthy();
+    const { component } = makeSut();
+    expect(component.find("email-input")).toBeTruthy();
   });
 
   it("Should render password input", () => {
-    const { wrapper } = makeSut();
-    expect(wrapper.find("password-input")).toBeTruthy();
+    const { component } = makeSut();
+    expect(component.find("password-input")).toBeTruthy();
   });
 
   it("Should render Sign In button with correct text", () => {
-    const { wrapper } = makeSut();
-    expect(wrapper.find("button")).toBeTruthy();
-    expect(wrapper.find("button").text()).toEqual("Sign In");
+    const { component } = makeSut();
+    expect(component.find("button")).toBeTruthy();
+    expect(component.find("button").text()).toEqual("Sign In");
   });
 });
