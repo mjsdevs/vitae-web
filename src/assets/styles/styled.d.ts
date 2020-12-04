@@ -9,6 +9,7 @@ declare module 'styled-components' {
       hoverPurple: string;
       grayBorder: string;
       red: string;
+      anchorColor: string;
     };
 
     fonts: {
