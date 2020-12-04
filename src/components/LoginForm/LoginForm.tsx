@@ -10,7 +10,7 @@ import {
   SignUpContainer,
   SignUpText,
 } from "./LoginForm.elements";
-import LoginInput from "../LoginInput/LoginInput";
+import LoginInput from "../LoginInput";
 import { LoginFormSignature } from "./protocols";
 import { LoginLogo, UserIcon, KeyIcon } from "../../assets/icons";
 
