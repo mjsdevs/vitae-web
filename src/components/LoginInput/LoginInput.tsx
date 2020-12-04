@@ -1,13 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import { LoginLabel, LoginInputField } from './LoginInput.elements';
-import { LoginInputProps } from './protocols';
+import { LoginLabel, LoginInputField } from "./LoginInput.elements";
+import { LoginInputProps } from "./protocols";
 
-const LoginInput: React.FC<LoginInputProps> = ({ labelName }) => {
+const LoginInput: React.FC<LoginInputProps> = ({ labelName, identifier }) => {
   return (
     <>
-      <LoginLabel>{labelName}</LoginLabel>
-      <LoginInputField isWrong={false} placeholder={labelName} />
+      <LoginLabel htmlFor={identifier}>{labelName}</LoginLabel>
+      <LoginInputField
+        id={identifier}
+        name={identifier}
+        placeholder={labelName}
+        isWrong={false}
+      />
     </>
   );
 };

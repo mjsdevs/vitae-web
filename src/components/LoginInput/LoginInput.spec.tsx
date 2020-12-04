@@ -7,6 +7,7 @@ const setup = () => {
   const props: LoginInputProps = {
     labelName: "Email",
     type: "email",
+    identifier: "email-input",
   };
 
   return {
