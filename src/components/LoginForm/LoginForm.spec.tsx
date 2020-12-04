@@ -12,7 +12,7 @@ const setup = () => {
 };
 
 describe("LoginForm test suit", () => {
-  it("renders without error", () => {
+  it("Should render without errors", () => {
     const { wrapper } = setup();
     expect(wrapper.exists()).toBeTruthy();
   });
