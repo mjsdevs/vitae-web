@@ -15,10 +15,21 @@ const LoginForm: React.FC<LoginFormSignature> = ({ handle }) => {
     <LoginSection>
       <SectionForm onSubmit={handle}>
         <LoginLabel htmlFor="email-input">E-mail</LoginLabel>
-        <LoginInput id="email-input" name="email-input" />
+        <LoginInput
+          id="email-input"
+          name="email-input"
+          placeholder="E-mail"
+          isWrong={false}
+        />
 
         <LoginLabel htmlFor="password-input">Password</LoginLabel>
-        <LoginInput id="password-input" name="password-input" />
+        <LoginInput
+          id="password-input"
+          name="password-input"
+          type="password"
+          placeholder="Password"
+          isWrong
+        />
 
         <SignInButton type="submit">Sign In</SignInButton>
       </SectionForm>
