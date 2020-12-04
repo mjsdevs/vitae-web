@@ -3,34 +3,17 @@ import React from "react";
 import {
   LoginSection,
   SectionForm,
-  LoginLabel,
-  LoginInput,
   SignInButton,
 } from "./LoginForm.elements";
-
+import LoginInput from "../LoginInput/LoginInput";
 import { LoginFormSignature } from "./protocols";
 
 const LoginForm: React.FC<LoginFormSignature> = ({ handle }) => {
   return (
     <LoginSection>
-      <SectionForm onSubmit={handle}>
-        <LoginLabel htmlFor="email-input">E-mail</LoginLabel>
-        <LoginInput
-          id="email-input"
-          name="email-input"
-          placeholder="E-mail"
-          isWrong={false}
-        />
-
-        <LoginLabel htmlFor="password-input">Password</LoginLabel>
-        <LoginInput
-          id="password-input"
-          name="password-input"
-          type="password"
-          placeholder="Password"
-          isWrong
-        />
-
+      <SectionForm onSubmit={handle} noValidate>
+        <LoginInput labelName="Email" identifier="email-input" type="email" />
+        <LoginInput labelName="Password" identifier="password-input" type="password" />
         <SignInButton type="submit">Sign In</SignInButton>
       </SectionForm>
     </LoginSection>

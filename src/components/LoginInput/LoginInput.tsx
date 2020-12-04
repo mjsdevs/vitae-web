@@ -3,7 +3,11 @@ import React from "react";
 import { LoginLabel, LoginInputField } from "./LoginInput.elements";
 import { LoginInputProps } from "./protocols";
 
-const LoginInput: React.FC<LoginInputProps> = ({ labelName, identifier }) => {
+const LoginInput: React.FC<LoginInputProps> = ({
+  labelName,
+  identifier,
+  type,
+}) => {
   return (
     <>
       <LoginLabel htmlFor={identifier}>{labelName}</LoginLabel>
@@ -12,6 +16,7 @@ const LoginInput: React.FC<LoginInputProps> = ({ labelName, identifier }) => {
         name={identifier}
         placeholder={labelName}
         isWrong={false}
+        type={type}
       />
     </>
   );
