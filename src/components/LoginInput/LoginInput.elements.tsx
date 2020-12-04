@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const LoginLabel = styled.label`
   display: none;
@@ -23,6 +23,30 @@ export const LoginInputField = styled.input<InputProps>`
     }};
 
   ::placeholder {
+    color: ${(props) => {
+      const color = props.isWrong
+        ? props.theme.colors.red
+        : props.theme.colors.grayBorder;
+
+      return color;
+    }};
+
+    font: ${(props) => props.theme.fonts.smallText};
+  }
+
+  :-ms-input-placeholder {
+    color: ${(props) => {
+      const color = props.isWrong
+        ? props.theme.colors.red
+        : props.theme.colors.grayBorder;
+
+      return color;
+    }};
+
+    font: ${(props) => props.theme.fonts.smallText};
+  }
+
+  ::-ms-input-placeholder {
     color: ${(props) => {
       const color = props.isWrong
         ? props.theme.colors.red
