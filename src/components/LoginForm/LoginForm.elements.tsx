@@ -18,3 +18,7 @@ export const SectionForm = styled.form`
 export const LoginLabel = styled.label``;
 
 export const LoginInput = styled.input``;
+
+SectionForm.displayName = 'form';
+LoginLabel.displayName = 'label';
+LoginInput.displayName = 'input';
