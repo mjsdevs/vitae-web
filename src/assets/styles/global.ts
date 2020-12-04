@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   * {
@@ -8,7 +8,7 @@ export default createGlobalStyle`
     outline: 0;
   }
 
-  button {
+  a, button {
     cursor: pointer;
   }
 `;
