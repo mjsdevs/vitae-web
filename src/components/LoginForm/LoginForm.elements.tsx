@@ -37,7 +37,8 @@ export const SignInButton = styled.button`
 
 export const MainActionsContainer = styled.div`
   height: 50px;
-  min-width: 400px;
+  min-width: 275px;
+  width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,10 +46,25 @@ export const MainActionsContainer = styled.div`
 
 export const ActionAnchor = styled.a`
   text-decoration: none;
-  font: ${props =>  props.theme.fonts.smallText};
+  font: ${(props) => props.theme.fonts.smallText};
   font-weight: bold;
+  color: ${(props) => props.theme.colors.anchorColor};
+`;
+
+export const SignUpContainer = styled.div`
+  min-width: 275px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const SignUpText = styled.p`
+  font: ${(props) => props.theme.fonts.smallText};
+  font-weight: 300;
 `;
 
 SectionForm.displayName = "form";
 SignInButton.displayName = "button";
-ActionAnchor.displayName = "action-anchor"
+ActionAnchor.displayName = "action-anchor";
