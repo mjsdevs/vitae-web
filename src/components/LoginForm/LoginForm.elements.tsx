@@ -4,9 +4,22 @@ export const LoginSection = styled.section`
   height: 100vh;
   min-width: 500px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+`;
+
+export const LogoContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+
+  svg {
+    height: 125px;
+  }
 `;
 
 export const SectionForm = styled.form`
@@ -40,7 +53,7 @@ export const MainActionsContainer = styled.div`
   min-width: 275px;
   width: 400px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 `;
 
@@ -58,6 +71,7 @@ export const SignUpContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 `;
 
 export const SignUpText = styled.p`
