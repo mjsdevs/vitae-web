@@ -32,4 +32,9 @@ describe("LoginForm test suit", () => {
     const { wrapper } = makeSut();
     expect(wrapper.find('label').at(1).text()).toEqual("Password");
   });
+
+  it("Should render password input", () => {
+    const { wrapper } = makeSut();
+    expect(wrapper.find('password-input')).toBeTruthy();
+  });
 });
