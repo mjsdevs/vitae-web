@@ -19,7 +19,6 @@ describe("LoginForm test suit", () => {
 
   it("Should render e-mail label", () => {
     const { wrapper } = makeSut();
-    console.log(wrapper.find(<label />).at(1).debug());
     expect(wrapper.find('label').at(0).text()).toEqual("E-mail");
   });
 
@@ -36,5 +35,10 @@ describe("LoginForm test suit", () => {
   it("Should render password input", () => {
     const { wrapper } = makeSut();
     expect(wrapper.find('password-input')).toBeTruthy();
+  });
+
+  it("Should render Sign In button", () => {
+    const { wrapper } = makeSut();
+    expect(wrapper.find('signIn-button')).toBeTruthy();
   });
 });
