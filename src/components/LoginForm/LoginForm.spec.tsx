@@ -24,11 +24,6 @@ describe("LoginForm test suit", () => {
 
   it("Should render e-mail input", () => {
     const { wrapper } = makeSut();
-    expect(wrapper.find('input')).toBeTruthy();
-  });
-
-  it("Should render password label", () => {
-    const { wrapper } = makeSut();
-    expect(wrapper.find('input')).toBeTruthy();
+    expect(wrapper.find({ name: 'email-input' })).toBeTruthy();
   });
 });
