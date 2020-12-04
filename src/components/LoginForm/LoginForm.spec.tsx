@@ -49,4 +49,9 @@ describe("LoginForm test suit", () => {
     expect(component.find("button")).toBeTruthy();
     expect(component.find("button").text()).toEqual("Sign In");
   });
+
+  it("Should render an anchor with correct text", () => {
+    const { component } = makeSut();
+    expect(component.find("action-anchor").at(0).text()).toEqual("Forgot Password?");
+  });
 });
