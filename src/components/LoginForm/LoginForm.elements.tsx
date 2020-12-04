@@ -35,5 +35,18 @@ export const SignInButton = styled.button`
   transition: background-color 0.1s ease-in;
 `;
 
+export const MainActionsContainer = styled.div`
+  display: flex;
+  min-width: 500px;
+  height: 50px;
+`;
+
+export const ActionAnchor = styled.a`
+  text-decoration: none;
+  font: ${props =>  props.theme.fonts.smallText};
+  font-weight: bold;
+`;
+
 SectionForm.displayName = "form";
 SignInButton.displayName = "button";
+ActionAnchor.displayName = "action-anchor"
