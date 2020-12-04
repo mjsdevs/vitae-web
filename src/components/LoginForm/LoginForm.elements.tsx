@@ -36,9 +36,11 @@ export const SignInButton = styled.button`
 `;
 
 export const MainActionsContainer = styled.div`
-  display: flex;
-  min-width: 500px;
   height: 50px;
+  min-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const ActionAnchor = styled.a`

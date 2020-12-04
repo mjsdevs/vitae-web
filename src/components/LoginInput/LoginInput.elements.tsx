@@ -10,7 +10,8 @@ interface InputProps {
 
 export const LoginInputField = styled.input<InputProps>`
   height: 50px;
-  width: 275px;
+  min-width: 275px;
+  width: 400px;
   padding: 15px;
   border-radius: 5px;
   border: 1px solid
