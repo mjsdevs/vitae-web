@@ -12,7 +12,7 @@ const LoginForm: React.FC = () => {
     <LoginSection>
       <SectionForm>
         <LoginLabel htmlFor="email-input">E-mail</LoginLabel>
-        <LoginInput id="email-input" />
+        <LoginInput id="email-input" name="email-input" />
       </SectionForm>
     </LoginSection>
   );
