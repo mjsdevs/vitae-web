@@ -24,4 +24,4 @@ export const SignInButton = styled.button``;
 SectionForm.displayName = "form";
 LoginLabel.displayName = "label";
 LoginInput.displayName = "input";
-SignInButton.displayName = "signIn-button";
+SignInButton.displayName = "button";

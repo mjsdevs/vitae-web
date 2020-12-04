@@ -8,10 +8,12 @@ import {
   SignInButton,
 } from "./LoginForm.elements";
 
-const LoginForm: React.FC = () => {
+import { LoginFormSignature } from "./protocols";
+
+const LoginForm: React.FC<LoginFormSignature> = ({ handle }) => {
   return (
     <LoginSection>
-      <SectionForm onSubmit={() => {}}>
+      <SectionForm onSubmit={handle}>
         <LoginLabel htmlFor="email-input">E-mail</LoginLabel>
         <LoginInput id="email-input" name="email-input" />
 
