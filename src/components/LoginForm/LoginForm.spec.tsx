@@ -17,6 +17,11 @@ describe("LoginForm test suit", () => {
     expect(wrapper.exists()).toBeTruthy();
   });
 
+  it("Should render e-mail label", () => {
+    const { wrapper } = setup();
+    expect(wrapper.find('label')).toBeTruthy();
+  });
+
   it("Should render e-mail input", () => {
     const { wrapper } = setup();
     expect(wrapper.find('input')).toBeTruthy();
