@@ -13,6 +13,9 @@ const LoginForm: React.FC = () => {
       <SectionForm>
         <LoginLabel htmlFor="email-input">E-mail</LoginLabel>
         <LoginInput id="email-input" name="email-input" />
+
+        <LoginLabel htmlFor="password-input">Password</LoginLabel>
+        <LoginInput id="password-input" name="password-input" />
       </SectionForm>
     </LoginSection>
   );
