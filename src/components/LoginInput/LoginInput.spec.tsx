@@ -1,13 +1,16 @@
 import React from "react";
 import { shallow } from "enzyme";
+
 import LoginInput from "./LoginInput";
 import { LoginInputProps } from "./protocols";
+import { UserIcon } from "../../assets/icons";
 
 const setup = () => {
   const props: LoginInputProps = {
     labelName: "Email",
     type: "email",
     identifier: "email-input",
+    icon: <UserIcon />,
   };
 
   return {

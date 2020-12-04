@@ -1,12 +1,11 @@
 import styled from "styled-components";
+interface InputProps {
+  isWrong: boolean;
+}
 
 export const LoginLabel = styled.label`
   display: none;
 `;
-
-interface InputProps {
-  isWrong: boolean;
-}
 
 export const LoginInputContainer = styled.div`
   display: flex;

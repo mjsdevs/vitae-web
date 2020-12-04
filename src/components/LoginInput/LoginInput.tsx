@@ -7,12 +7,12 @@ import {
   IconContainer,
 } from "./LoginInput.elements";
 import { LoginInputProps } from "./protocols";
-import { UserIcon } from "../../assets/icons";
 
 const LoginInput: React.FC<LoginInputProps> = ({
   labelName,
   identifier,
   type,
+  icon,
 }) => {
   return (
     <>
@@ -20,7 +20,7 @@ const LoginInput: React.FC<LoginInputProps> = ({
 
       <LoginInputContainer>
         <IconContainer isWrong={false}>
-          <UserIcon />
+          {icon}
         </IconContainer>
         <LoginInputField
           id={identifier}
