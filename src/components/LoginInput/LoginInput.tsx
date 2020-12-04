@@ -1,8 +1,13 @@
 import React from 'react';
 
-const LoginInput: React.FC = () => {
+import { LoginLabel, LoginInputField } from './LoginInput.elements';
+import { LoginInputProps } from './protocols';
+
+const LoginInput: React.FC<LoginInputProps> = ({ labelName }) => {
   return (
-    <p>Dale Boy!</p>
+    <>
+      <LoginLabel>{labelName}</LoginLabel>
+    </>
   );
 };
 
