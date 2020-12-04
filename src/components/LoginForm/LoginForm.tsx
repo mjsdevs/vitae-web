@@ -2,6 +2,7 @@ import React from "react";
 
 import {
   LoginSection,
+  LogoContainer,
   SectionForm,
   ActionAnchor,
   MainActionsContainer,
@@ -11,11 +12,15 @@ import {
 } from "./LoginForm.elements";
 import LoginInput from "../LoginInput/LoginInput";
 import { LoginFormSignature } from "./protocols";
-import { UserIcon, KeyIcon } from "../../assets/icons";
+import { LoginLogo, UserIcon, KeyIcon } from "../../assets/icons";
 
 const LoginForm: React.FC<LoginFormSignature> = ({ handle }) => {
   return (
     <LoginSection>
+      <LogoContainer>
+        <LoginLogo />
+      </LogoContainer>
+
       <SectionForm onSubmit={handle} noValidate>
         <LoginInput
           labelName="Email"
