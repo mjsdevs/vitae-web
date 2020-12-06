@@ -3,19 +3,14 @@ import { ThemeProvider } from "styled-components";
 
 import GlobalStyle from "./assets/styles/global";
 import theme from "./assets/styles";
-import { LoginForm } from "./components";
+import { Login } from "./views";
 
 function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <LoginForm
-          handle={(e) => {
-            e.preventDefault();
-            console.log("oi");
-          }}
-        />
+        <Login />
       </ThemeProvider>
     </div>
   );
