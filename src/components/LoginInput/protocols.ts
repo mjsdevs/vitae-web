@@ -3,4 +3,5 @@ export interface LoginInputProps {
   type: string;
   identifier: string;
   icon: any;
+  isWrong: boolean;
 }

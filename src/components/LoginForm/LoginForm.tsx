@@ -27,12 +27,14 @@ const LoginForm: React.FC<LoginFormSignature> = ({ handle }) => {
           identifier="email-input"
           type="email"
           icon={<UserIcon />}
+          isWrong={false}
         />
         <LoginInput
           labelName="Password"
           identifier="password-input"
           type="password"
           icon={<KeyIcon />}
+          isWrong={false}
         />
 
         <MainActionsContainer>
