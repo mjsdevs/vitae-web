@@ -5,7 +5,7 @@ import LoginInput from "./LoginInput";
 import { LoginInputProps } from "./protocols";
 import { UserIcon } from "../../assets/icons";
 
-const setup = () => {
+const makeSut = () => {
   const props: LoginInputProps = {
     labelName: "Email",
     type: "email",
@@ -21,17 +21,17 @@ const setup = () => {
 
 describe("LoginInput test suit", () => {
   it("Should render without errors", () => {
-    const { component } = setup();
+    const { component } = makeSut();
     expect(component.exists()).toBeTruthy();
   });
 
   it("Should render a label with correct text", () => {
-    const { component } = setup();
+    const { component } = makeSut();
     expect(component.find("label").text()).toEqual("Email");
   });
 
   it("Should render an input with correct placeholder", () => {
-    const { component } = setup();
+    const { component } = makeSut();
     expect(component.find("input").props().placeholder).toEqual("Email");
   });
 });
