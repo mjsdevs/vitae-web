@@ -110,5 +110,10 @@ export const IconContainer = styled.div<InputProps>`
   }
 `;
 
+export const ErrorMessage = styled.p`
+  color: ${(props) => props.theme.colors.red};
+`;
+
+ErrorMessage.displayName = "error";
 LoginLabel.displayName = "label";
 LoginInputField.displayName = "input";
