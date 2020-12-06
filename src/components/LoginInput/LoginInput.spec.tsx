@@ -23,6 +23,7 @@ const makeSut = () => {
     identifier: "email-input",
     icon: <UserIcon />,
     isWrong: inputValidatorStub.validate(),
+    onChange: () => {}
   };
 
   return {

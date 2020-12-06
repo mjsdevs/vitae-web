@@ -79,6 +79,12 @@ export const SignUpText = styled.p`
   font-weight: 300;
 `;
 
+export const ErrorMessage = styled.p`
+  color: ${(props) => props.theme.colors.red};
+  font: ${(props) => props.theme.fonts.smallText};
+`;
+
+ErrorMessage.displayName = "error";
 SectionForm.displayName = "form";
 SignInButton.displayName = "button";
 ActionAnchor.displayName = "action-anchor";

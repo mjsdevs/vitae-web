@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 
 import {
   LoginInputContainer,
@@ -14,7 +14,12 @@ const LoginInput: React.FC<LoginInputProps> = ({
   type,
   icon,
   isWrong,
+  onChange,
 }) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    onChange(e.target.value);
+  }
+
   return (
     <>
       <LoginLabel htmlFor={identifier}>{labelName}</LoginLabel>
@@ -27,6 +32,7 @@ const LoginInput: React.FC<LoginInputProps> = ({
           placeholder={labelName}
           isWrong={isWrong}
           type={type}
+          onChange={handleChange}
         />
       </LoginInputContainer>
     </>

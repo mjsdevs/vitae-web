@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FormEvent, useState } from "react";
 
 import {
   LoginSection,
@@ -14,27 +14,35 @@ import LoginInput from "../LoginInput";
 import { LoginFormSignature } from "./protocols";
 import { LoginLogo, UserIcon, KeyIcon } from "../../assets/icons";
 
-const LoginForm: React.FC<LoginFormSignature> = ({ handle }) => {
+const LoginForm: React.FC<LoginFormSignature> = ({ handle, isWrong }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <LoginSection>
       <LogoContainer>
         <LoginLogo />
       </LogoContainer>
 
-      <SectionForm onSubmit={handle} noValidate>
+      <SectionForm
+        onSubmit={(e: FormEvent) => handle(e, { email, password })}
+        noValidate
+      >
         <LoginInput
           labelName="Email"
           identifier="email-input"
           type="email"
           icon={<UserIcon />}
-          isWrong={false}
+          isWrong={isWrong}
+          onChange={setEmail}
         />
         <LoginInput
           labelName="Password"
           identifier="password-input"
           type="password"
           icon={<KeyIcon />}
-          isWrong={false}
+          isWrong={isWrong}
+          onChange={setPassword}
         />
 
         <MainActionsContainer>
