@@ -5,12 +5,15 @@ import LoginInput from "./LoginInput";
 import { LoginInputProps } from "./protocols";
 import { UserIcon } from "../../assets/icons";
 
+const inputValidator = jest.fn(() => false);
+
 const makeSut = () => {
   const props: LoginInputProps = {
     labelName: "Email",
     type: "email",
     identifier: "email-input",
     icon: <UserIcon />,
+    isWrong: inputValidator(),
   };
 
   return {
@@ -33,5 +36,14 @@ describe("LoginInput test suit", () => {
   it("Should render an input with correct placeholder", () => {
     const { component } = makeSut();
     expect(component.find("input").props().placeholder).toEqual("Email");
+  });
+
+  it("Should show an error message if isWrong prop is true", () => {
+    const { component } = makeSut();
+    inputValidator.mockReturnValueOnce(true);
+    const errorMessage = component.find('error');
+
+    expect(errorMessage).toBeTruthy();
+    expect(errorMessage.text()).toEqual("Wrong email or password provided");
   });
 });
