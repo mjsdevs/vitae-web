@@ -9,6 +9,7 @@ import {
   SignInButton,
   SignUpContainer,
   SignUpText,
+  ErrorMessage,
 } from "./LoginForm.elements";
 import LoginInput from "../LoginInput";
 import { LoginFormSignature } from "./protocols";
@@ -23,6 +24,8 @@ const LoginForm: React.FC<LoginFormSignature> = ({ handle, isWrong }) => {
       <LogoContainer>
         <LoginLogo />
       </LogoContainer>
+
+      <ErrorMessage>Wrong Email or Password provided</ErrorMessage>
 
       <SectionForm
         onSubmit={(e: FormEvent) => handle(e, { email, password })}
