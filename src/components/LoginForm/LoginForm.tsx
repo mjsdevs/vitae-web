@@ -25,8 +25,8 @@ const LoginForm: React.FC<LoginFormSignature> = ({ handle }) => {
         <LoginInput
           labelName="Email"
           identifier="email-input"
-          icon={<UserIcon />}
           type="email"
+          icon={<UserIcon />}
         />
         <LoginInput
           labelName="Password"
