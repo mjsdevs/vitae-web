@@ -25,7 +25,7 @@ const LoginForm: React.FC<LoginFormSignature> = ({ handle, isWrong }) => {
         <LoginLogo />
       </LogoContainer>
 
-      <ErrorMessage>Wrong Email or Password provided</ErrorMessage>
+      {isWrong && <ErrorMessage>Wrong Email or Password provided</ErrorMessage>}
 
       <SectionForm
         onSubmit={(e: FormEvent) => handle(e, { email, password })}
