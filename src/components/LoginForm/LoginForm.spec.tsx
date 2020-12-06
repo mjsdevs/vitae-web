@@ -65,4 +65,15 @@ describe("LoginForm test suit", () => {
       "Wrong Email or Password provided"
     );
   });
+
+  it("Should not show an error message if isWrong is set to false", () => {
+    const props = {
+      handle: jest.fn(),
+      isWrong: false,
+    };
+
+    const component = shallow(<LoginForm {...props} />);
+
+    expect(component.find("error").length).toBeFalsy();
+  });
 });
