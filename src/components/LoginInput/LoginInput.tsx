@@ -5,7 +5,6 @@ import {
   LoginLabel,
   LoginInputField,
   IconContainer,
-  ErrorMessage,
 } from "./LoginInput.elements";
 import { LoginInputProps } from "./protocols";
 
@@ -19,8 +18,6 @@ const LoginInput: React.FC<LoginInputProps> = ({
   return (
     <>
       <LoginLabel htmlFor={identifier}>{labelName}</LoginLabel>
-
-      {isWrong && <ErrorMessage>Wrong email or password provided</ErrorMessage>}
 
       <LoginInputContainer>
         <IconContainer isWrong={isWrong}>{icon}</IconContainer>
