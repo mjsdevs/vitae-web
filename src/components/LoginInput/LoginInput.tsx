@@ -20,7 +20,7 @@ const LoginInput: React.FC<LoginInputProps> = ({
     <>
       <LoginLabel htmlFor={identifier}>{labelName}</LoginLabel>
 
-      <ErrorMessage>Wrong email or password provided</ErrorMessage>
+      {isWrong && <ErrorMessage>Wrong email or password provided</ErrorMessage>}
 
       <LoginInputContainer>
         <IconContainer isWrong={isWrong}>{icon}</IconContainer>
