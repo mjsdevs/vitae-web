@@ -55,4 +55,20 @@ describe("LoginInput test suit", () => {
     expect(errorMessage).toBeTruthy();
     expect(errorMessage.text()).toEqual("Wrong email or password provided");
   });
+
+  it("Should not show an error message if isWrong prop is false", () => {
+    const props: LoginInputProps = {
+      labelName: "Email",
+      type: "email",
+      identifier: "email-input",
+      icon: <UserIcon />,
+      isWrong: false,
+    };
+
+    const component = shallow(<LoginInput {...props} />);
+
+    const errorMessage = component.find("error");
+
+    expect(errorMessage).toEqual({});
+  });
 });
