@@ -1,29 +1,14 @@
-import React, { FormEvent } from "react";
+import React from "react";
 import { shallow } from "enzyme";
 import LoginForm from "./LoginForm";
-import { LoginFormSignature } from "./protocols";
-
-const makeSubmitHandler = (): LoginFormSignature => {
-  class MakeSubmitHandlerStub implements LoginFormSignature {
-    handle(e: FormEvent) {
-      e.preventDefault();
-      return true;
-    }
-  }
-
-  return new MakeSubmitHandlerStub();
-};
 
 const makeSut = () => {
-  const submitHandlerStub = makeSubmitHandler();
-
   const props = {
-    handle: submitHandlerStub.handle,
+    handle: jest.fn(),
   };
 
   return {
     props,
-    submitHandlerStub,
     component: shallow(<LoginForm {...props} />),
   };
 };
@@ -52,11 +37,22 @@ describe("LoginForm test suit", () => {
 
   it("Should render Forgot Password anchor with correct text", () => {
     const { component } = makeSut();
-    expect(component.find("action-anchor").at(0).text()).toEqual("Forgot Password?");
+    expect(component.find("action-anchor").at(0).text()).toEqual(
+      "Forgot Password?"
+    );
   });
 
   it("Should render Sign Up anchor with correct text", () => {
     const { component } = makeSut();
     expect(component.find("action-anchor").at(1).text()).toEqual("Sign Up");
+  });
+
+  it("Should call the handle method", () => {
+    const { component, props } = makeSut();
+
+    const form = component.find("form");
+    form.simulate("submit");
+
+    expect(props.handle).toHaveBeenCalled();
   });
 });
