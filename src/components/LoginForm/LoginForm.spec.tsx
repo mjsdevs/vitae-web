@@ -56,4 +56,13 @@ describe("LoginForm test suit", () => {
 
     expect(props.handle).toHaveBeenCalled();
   });
+
+  it("Should show an error message if isWrong is set to true", () => {
+    const { component } = makeSut();
+
+    expect(component.find("error")).toBeTruthy();
+    expect(component.find("error").text()).toEqual(
+      "Wrong Email or Password provided"
+    );
+  });
 });
