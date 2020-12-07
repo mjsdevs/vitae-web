@@ -16,7 +16,6 @@ const Login: React.FC = () => {
         return;
       }
     }
-    console.log(formData);
 
     const { email, password } = formData;
 
