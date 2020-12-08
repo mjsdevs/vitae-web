@@ -2,13 +2,20 @@ import React from "react";
 
 import {
   SectionContainer,
+  LogoContainer,
   RibbonAnchorContainer,
   ForkMeOnGitHubRibbon,
 } from "./LoginRightSection.elements";
 
+import { BigLoginLogo } from "../../assets/icons";
+
 const LoginRightSection: React.FC = () => {
   return (
     <SectionContainer>
+      <LogoContainer>
+        <BigLoginLogo />
+      </LogoContainer>
+
       <RibbonAnchorContainer>
         <ForkMeOnGitHubRibbon
           loading="lazy"
