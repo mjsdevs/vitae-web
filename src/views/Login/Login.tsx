@@ -1,7 +1,8 @@
 import React, { FormEvent, useState } from "react";
 import * as EmailValidator from "email-validator";
 
-import { LoginForm } from "../../components";
+import { LoginForm, LoginRightSection } from "../../components";
+import { LoginSection } from "./Login.elements";
 
 const Login: React.FC = () => {
   const [isWrong, setIsWrong] = useState(false);
@@ -22,19 +23,23 @@ const Login: React.FC = () => {
     const isEmailValid = EmailValidator.validate(email);
     if (isEmailValid === false) {
       setIsWrong(true);
-      console.log('email inválido');
+      console.log("email inválido");
       return;
     }
 
     if (password.length < 3) {
-      console.log('senha inválida');
+      console.log("senha inválida");
       setIsWrong(true);
       return;
     }
-
   };
 
-  return <LoginForm handle={handleSubmit} isWrong={isWrong} />;
+  return (
+    <LoginSection>
+      <LoginForm handle={handleSubmit} isWrong={isWrong} />
+      <LoginRightSection />
+    </LoginSection>
+  );
 };
 
 export default Login;

@@ -1,5 +1,4 @@
-import LoginForm from './LoginForm';
+import LoginForm from "./LoginForm";
+import LoginRightSection from "./LoginRightSection";
 
-export {
-  LoginForm,
-};
+export { LoginForm, LoginRightSection };
