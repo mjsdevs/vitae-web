@@ -9,7 +9,11 @@ export const SectionContainer = styled.section`
 
 export const RibbonAnchorContainer = styled.a.attrs(() => ({
   href: "https://github.com/mjsdevs/vitae-web",
-}))``;
+}))`
+  position: absolute;
+  top: 0;
+  right: 0;
+`;
 
 export const ForkMeOnGitHubRibbon = styled.img`
   width: 149px;
