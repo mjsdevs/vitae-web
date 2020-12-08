@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SectionContainer = styled.section`
   min-width: 780px;
-  max-width: 100%;
+  width: 100%;
   height: 100vh;
   background-color: ${(props) => props.theme.colors.purple};
   display: flex;
@@ -17,6 +17,7 @@ export const LogoContainer = styled.div`
 
 export const RibbonAnchorContainer = styled.a.attrs(() => ({
   href: "https://github.com/mjsdevs/vitae-web",
+  target: "_blank",
 }))`
   position: absolute;
   top: 0;
