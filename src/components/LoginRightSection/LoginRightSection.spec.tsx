@@ -17,7 +17,7 @@ describe("LoginRightSection test suit", () => {
     expect(component.exists()).toBeTruthy();
   });
 
-  it("Should render an image with the text 'Fork me on Github '", () => {
+  it("Should render an image with the text 'Fork me on Github'", () => {
     const { component } = makeSut();
     const image = component.find("img");
     const imageSource =
@@ -25,5 +25,12 @@ describe("LoginRightSection test suit", () => {
 
     expect(image.prop("alt")).toEqual("Fork me on GitHub");
     expect(image.prop("src")).toEqual(imageSource);
+  });
+
+  it("Should render a container to show the logo", () => {
+    const { component } = makeSut();
+    const LogoContainer = component.find("div");
+
+    expect(LogoContainer.exists()).toBeTruthy();
   });
 });
