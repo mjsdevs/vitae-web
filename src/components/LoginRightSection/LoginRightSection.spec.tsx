@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import LoginRightSection from "./LoginRightSection";
 
-const setup = () => {
+const makeSut = () => {
   const props = {};
 
   return {
@@ -12,8 +12,18 @@ const setup = () => {
 };
 
 describe("LoginRightSection test suit", () => {
-  it("renders without error", () => {
-    const { component } = setup();
+  it("Should render without errors", () => {
+    const { component } = makeSut();
     expect(component.exists()).toBeTruthy();
+  });
+
+  it("Should render an image with the text 'Fork me on Github '", () => {
+    const { component } = makeSut();
+    const image = component.find("img");
+
+    expect(image.prop("alt")).toEqual("Fork me on GitHub");
+    expect(image.prop("src")).toEqual(
+      "https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149"
+    );
   });
 });
