@@ -5,6 +5,14 @@ export const SectionContainer = styled.section`
   max-width: 100%;
   height: 100vh;
   background-color: ${(props) => props.theme.colors.purple};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
+
+export const LogoContainer = styled.div`
+  height: 300px;
 `;
 
 export const RibbonAnchorContainer = styled.a.attrs(() => ({
@@ -20,4 +28,5 @@ export const ForkMeOnGitHubRibbon = styled.img`
   height: 149px;
 `;
 
+LogoContainer.displayName = "div";
 ForkMeOnGitHubRibbon.displayName = "img";
