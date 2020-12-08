@@ -6,3 +6,14 @@ export const SectionContainer = styled.section`
   height: 100vh;
   background-color: ${(props) => props.theme.colors.purple};
 `;
+
+export const RibbonAnchorContainer = styled.a.attrs(() => ({
+  href: "https://github.com/mjsdevs/vitae-web",
+}))``;
+
+export const ForkMeOnGitHubRibbon = styled.img`
+  width: 149px;
+  height: 149px;
+`;
+
+ForkMeOnGitHubRibbon.displayName = "img";
